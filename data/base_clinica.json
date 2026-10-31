@@ -1,0 +1,152 @@
+{
+  "tutores": [
+    {"id_tutor": 1, "nome": "Ana Paula Souza", "cpf": "222.222.222-22", "telefone": "11988888888"},
+    {"id_tutor": 2, "nome": "Bruno Ferreira", "cpf": "333.333.333-33", "telefone": "11977777777"},
+    {"id_tutor": 3, "nome": "Carlos Mendes", "cpf": "111.111.111-11", "telefone": "11999999999"},
+    {"id_tutor": 4, "nome": "Daniela Rocha", "cpf": "444.444.444-44", "telefone": "11966666666"},
+    {"id_tutor": 5, "nome": "Eduardo Lima", "cpf": "555.555.555-55", "telefone": "11955555555"},
+    {"id_tutor": 6, "nome": "Fernanda Alves", "cpf": "666.666.666-66", "telefone": "11944444444"}
+  ],
+  "pets": [
+    {
+      "id_pet": 1,
+      "id_tutor": 3,
+      "nome": "Rex",
+      "especie": "Cachorro",
+      "cor": "Marrom",
+      "idade": 5,
+      "peso": 15.5,
+      "rfid_uid": "A1B2C3D4",
+      "status_internacao": null,
+      "gaiola": null,
+      "comportamento": "Calmo em consultório; aceita contenção."
+    },
+    {
+      "id_pet": 2,
+      "id_tutor": 3,
+      "nome": "Mia",
+      "especie": "Gato",
+      "cor": "Branco",
+      "idade": 2,
+      "peso": 4.2,
+      "rfid_uid": "B2C3D4E5",
+      "status_internacao": null,
+      "gaiola": null,
+      "comportamento": "Alerta a ruídos; prefere ambientes silenciosos."
+    },
+    {
+      "id_pet": 3,
+      "id_tutor": 1,
+      "nome": "Thor",
+      "especie": "Cachorro",
+      "cor": "Preto",
+      "idade": 8,
+      "peso": 25.0,
+      "rfid_uid": "C3D4E5F6",
+      "status_internacao": "Internado",
+      "gaiola": "G-04",
+      "comportamento": "Sênior; cansaço após esforço; desconforto em calor."
+    },
+    {
+      "id_pet": 4,
+      "id_tutor": 1,
+      "nome": "Luna",
+      "especie": "Cachorro",
+      "cor": "Caramelo",
+      "idade": 1,
+      "peso": 8.0,
+      "rfid_uid": "D4E5F607",
+      "status_internacao": null,
+      "gaiola": null,
+      "comportamento": "Filhote ativo; socialização em andamento."
+    },
+    {
+      "id_pet": 5,
+      "id_tutor": 2,
+      "nome": "Frajola",
+      "especie": "Gato",
+      "cor": "Preto e Branco",
+      "idade": 3,
+      "peso": 5.1,
+      "rfid_uid": "E5F60718",
+      "status_internacao": null,
+      "gaiola": null,
+      "comportamento": "Lambe-se com frequência na região dorsal."
+    },
+    {
+      "id_pet": 6,
+      "id_tutor": 4,
+      "nome": "Nina",
+      "especie": "Cachorro",
+      "cor": "Branco",
+      "idade": 10,
+      "peso": 12.3,
+      "rfid_uid": "F6071829",
+      "status_internacao": null,
+      "gaiola": null,
+      "comportamento": "Geriátrica; ritmo lento; boa convivência."
+    },
+    {
+      "id_pet": 7,
+      "id_tutor": 5,
+      "nome": "Bidu",
+      "especie": "Cachorro",
+      "cor": "Cinza",
+      "idade": 6,
+      "peso": 18.7,
+      "rfid_uid": "0718293A",
+      "status_internacao": "Internado",
+      "gaiola": "G-02",
+      "comportamento": "Ansioso em gaiola; vocaliza quando isolado."
+    },
+    {
+      "id_pet": 8,
+      "id_tutor": 6,
+      "nome": "Pipoca",
+      "especie": "Gato",
+      "cor": "Laranja",
+      "idade": 1,
+      "peso": 1.2,
+      "rfid_uid": "18293A4B",
+      "status_internacao": "Internado",
+      "gaiola": "G-07",
+      "comportamento": "Filhote de baixo peso; busca fonte de calor."
+    }
+  ],
+  "prontuarios": [
+    {"id_prontuario": 1, "id_pet": 1, "diagnostico": "Vermifugacao e antipulgas em dia. Pet saudavel.", "data_registro": "2026-09-01"},
+    {"id_prontuario": 2, "id_pet": 2, "diagnostico": "Alergia cutanea leve; shampoo medicinal indicado.", "data_registro": "2026-09-02"},
+    {"id_prontuario": 3, "id_pet": 3, "diagnostico": "Otite bilateral tratada com antibiotico.", "data_registro": "2026-09-03"},
+    {"id_prontuario": 4, "id_pet": 5, "diagnostico": "Sobrepeso identificado; dieta controlada.", "data_registro": "2026-09-04"},
+    {"id_prontuario": 5, "id_pet": 6, "diagnostico": "Check-up geriatrico: funcao renal preservada.", "data_registro": "2026-09-05"},
+    {"id_prontuario": 6, "id_pet": 8, "diagnostico": "Filhote em protocolo de vacinacao primaria.", "data_registro": "2026-09-06"}
+  ],
+  "consultas": [
+    {"id_consulta": 1, "id_veterinario": 1, "id_pet": 1, "id_clinica": 1, "id_prontuario": 1, "data_consulta": "2026-09-01", "status": "Realizada"},
+    {"id_consulta": 2, "id_veterinario": 1, "id_pet": 2, "id_clinica": 1, "id_prontuario": 2, "data_consulta": "2026-09-02", "status": "Realizada"},
+    {"id_consulta": 3, "id_veterinario": 2, "id_pet": 3, "id_clinica": 1, "id_prontuario": 3, "data_consulta": "2026-09-03", "status": "Realizada"},
+    {"id_consulta": 4, "id_veterinario": 2, "id_pet": 4, "id_clinica": 1, "id_prontuario": null, "data_consulta": "2026-09-13", "status": "Agendada"},
+    {"id_consulta": 5, "id_veterinario": 3, "id_pet": 5, "id_clinica": 2, "id_prontuario": 4, "data_consulta": "2026-09-04", "status": "Realizada"},
+    {"id_consulta": 6, "id_veterinario": 3, "id_pet": 6, "id_clinica": 2, "id_prontuario": 5, "data_consulta": "2026-09-05", "status": "Realizada"},
+    {"id_consulta": 7, "id_veterinario": 4, "id_pet": 7, "id_clinica": 2, "id_prontuario": null, "data_consulta": "2026-09-14", "status": "Agendada"},
+    {"id_consulta": 8, "id_veterinario": 4, "id_pet": 8, "id_clinica": 3, "id_prontuario": 6, "data_consulta": "2026-09-06", "status": "Realizada"},
+    {"id_consulta": 9, "id_veterinario": 5, "id_pet": 1, "id_clinica": 3, "id_prontuario": null, "data_consulta": "2026-09-16", "status": "Agendada"}
+  ],
+  "vacinas": [
+    {"id_pet": 1, "nome": "V10", "data_aplicacao": "2026-03-10", "validade": "2027-03-10", "status": "Em dia"},
+    {"id_pet": 1, "nome": "Antirrabica", "data_aplicacao": "2026-03-10", "validade": "2027-03-10", "status": "Em dia"},
+    {"id_pet": 2, "nome": "V4 Felina", "data_aplicacao": "2026-01-20", "validade": "2027-01-20", "status": "Em dia"},
+    {"id_pet": 3, "nome": "V10", "data_aplicacao": "2025-08-01", "validade": "2026-08-01", "status": "Vencida"},
+    {"id_pet": 3, "nome": "Antirrabica", "data_aplicacao": "2025-08-01", "validade": "2026-08-01", "status": "Vencida"},
+    {"id_pet": 4, "nome": "V10 (1a dose)", "data_aplicacao": "2026-07-15", "validade": "2026-08-15", "status": "Reforco pendente"},
+    {"id_pet": 5, "nome": "V4 Felina", "data_aplicacao": "2025-09-01", "validade": "2026-09-01", "status": "Vencida"},
+    {"id_pet": 6, "nome": "V10", "data_aplicacao": "2025-06-12", "validade": "2026-06-12", "status": "Vencida"},
+    {"id_pet": 7, "nome": "V10", "data_aplicacao": "2026-02-02", "validade": "2027-02-02", "status": "Em dia"},
+    {"id_pet": 8, "nome": "V4 Felina (1a dose)", "data_aplicacao": "2026-08-20", "validade": "2026-09-20", "status": "Reforco pendente"}
+  ],
+  "medicamentos": [
+    {"id_pet": 3, "nome": "Antibiotico otologico", "indicacao": "Otite bilateral", "data_inicio": "2026-09-03", "dias": 10, "em_uso": true},
+    {"id_pet": 2, "nome": "Shampoo medicinal", "indicacao": "Alergia cutanea", "data_inicio": "2026-09-02", "dias": 14, "em_uso": true},
+    {"id_pet": 5, "nome": "Racao hipocalorica", "indicacao": "Sobrepeso", "data_inicio": "2026-09-04", "dias": 60, "em_uso": true}
+  ]
+}

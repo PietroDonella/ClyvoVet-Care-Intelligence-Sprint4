@@ -1,0 +1,35 @@
+{
+  "comentario": "Simula o payload MQTT das sprints 1 e 2 (HiveMQ: clyvovet/internacao/temp e clyvovet/triagem/rfid).",
+  "leituras": [
+    {
+      "timestamp": "2026-09-11T10:02:00",
+      "origem": "ESP32 / Wokwi",
+      "topico": "clyvovet/internacao/temp",
+      "gaiola": "G-04",
+      "temperatura": 32.4,
+      "umidade": 78,
+      "rfid_lido": "C3D4E5F6",
+      "pet_esperado_id": 3
+    },
+    {
+      "timestamp": "2026-09-11T10:02:05",
+      "origem": "ESP32 / Wokwi",
+      "topico": "clyvovet/internacao/temp",
+      "gaiola": "G-07",
+      "temperatura": 17.1,
+      "umidade": 35,
+      "rfid_lido": "18293A4B",
+      "pet_esperado_id": 8
+    },
+    {
+      "timestamp": "2026-09-11T10:02:10",
+      "origem": "ESP32 / Wokwi",
+      "topico": "clyvovet/triagem/rfid",
+      "gaiola": "G-02",
+      "temperatura": 24.0,
+      "umidade": 55,
+      "rfid_lido": "A1B2C3D4",
+      "pet_esperado_id": 7
+    }
+  ]
+}

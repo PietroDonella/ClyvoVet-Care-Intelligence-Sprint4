@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CLYVO VET — Care Intelligence</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="marca">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+        <path d="M16 8 v16 M8 16 h16" stroke="currentColor" stroke-width="1.5"></path>
+      </svg>
+      <div>
+        <p class="sobreitulo">CLYVO VET</p>
+        <h1>Care Intelligence</h1>
+      </div>
+    </div>
+    <p id="status-servico" class="status">Carregando a base clínica…</p>
+    <nav class="abas" aria-label="Visões da aplicação">
+      <button type="button" id="aba-plantao" aria-pressed="true">Plantão</button>
+      <button type="button" id="aba-tutor" aria-pressed="false">Tutor</button>
+      <button type="button" id="aba-avaliacao" aria-pressed="false">Avaliação</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="vista-plantao">
+      <div class="layout">
+        <section class="coluna" aria-labelledby="titulo-fila">
+          <h2 id="titulo-fila">Fila de atendimento</h2>
+          <p class="apoio">A ordem sai da gaiola, do prontuário e das vacinas. O primeiro nome é quem precisa de ação agora.</p>
+          <div id="fila" class="fila"></div>
+        </section>
+        <section class="coluna detalhe" id="detalhe" aria-live="polite" aria-labelledby="titulo-detalhe">
+          <h2 id="titulo-detalhe">Caso</h2>
+          <p class="apoio">Selecione um animal da fila.</p>
+        </section>
+      </div>
+
+      <section class="sensor" aria-labelledby="titulo-sensor">
+        <div>
+          <h2 id="titulo-sensor">Leitura do sensor</h2>
+          <p class="apoio">O mesmo JSON dos tópicos <code>clyvovet/internacao/temp</code> e <code>clyvovet/triagem/rfid</code>. A fila recalcula com a leitura mais recente.</p>
+        </div>
+        <div class="presets" role="group" aria-label="Casos de demonstração">
+          <button type="button" data-preset="thor-calor">Calor no Thor</button>
+          <button type="button" data-preset="thor-conforto">Thor na faixa</button>
+          <button type="button" data-preset="pipoca-frio">Frio na Pipoca</button>
+          <button type="button" data-preset="bidu-troca">Coleira do Rex no Bidu</button>
+          <button type="button" data-preset="bidu-ok">Coleira certa do Bidu</button>
+          <button type="button" id="restaurar" class="secundario">Restaurar base</button>
+        </div>
+        <form id="form-leitura">
+          <label>Gaiola <input id="campo-gaiola" name="gaiola" required value="G-04"></label>
+          <label>Temperatura °C <input id="campo-temp" name="temperatura" type="number" step="0.1" min="0" max="50" required value="32.4"></label>
+          <label>Umidade % <input id="campo-umidade" name="umidade" type="number" step="1" min="0" max="100" required value="78"></label>
+          <label>RFID lido <input id="campo-rfid" name="rfid" required value="C3D4E5F6" autocomplete="off"></label>
+          <label>Pet da gaiola
+            <select id="campo-pet" name="pet" required></select>
+          </label>
+          <label>Tópico
+            <select id="campo-topico" name="topico">
+              <option value="clyvovet/internacao/temp">clyvovet/internacao/temp</option>
+              <option value="clyvovet/triagem/rfid">clyvovet/triagem/rfid</option>
+            </select>
+          </label>
+          <button type="submit">Publicar leitura</button>
+        </form>
+        <p id="erro-leitura" class="erro" role="alert"></p>
+      </section>
+    </section>
+
+    <section id="vista-tutor" hidden>
+      <div class="tutor-topo">
+        <div>
+          <h2>Acompanhamento do pet</h2>
+          <p class="apoio">O tutor vê o próximo passo. A identificação da coleira e o prontuário ficam com o plantão.</p>
+        </div>
+        <label>Tutor
+          <select id="campo-tutor"></select>
+        </label>
+      </div>
+      <p id="tutor-meta" class="apoio"></p>
+      <div id="cards-tutor" class="cards-tutor"></div>
+    </section>
+
+    <section id="vista-avaliacao" hidden>
+      <h2>Mesma conta, dois perfis</h2>
+      <p class="apoio">O relatório abaixo é gerado pelo mesmo código da fila. 27 °C não é o mesmo problema para um cão sênior e para um gato adulto.</p>
+      <pre id="texto-avaliacao"></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>A decisão terapêutica permanece com o veterinário responsável.</p>
+    <p>Enzo Vaz (RM 561702) · Lucas Ryuji Fukuda (RM 562152) · Pietro Donella Salomão (RM 561722)</p>
+  </footer>
+  <script src="/app.js"></script>
+</body>
+</html>
