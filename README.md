@@ -71,46 +71,27 @@ Para acompanhar a demonstração:
 3. **Thor na faixa** (22 °C e 50%) derruba o score climático para 0 e mantém a vacina vencida.
 4. A aba Avaliação imprime o mesmo texto de `python app.py --relatorio`.
 
-## Estrutura
+## Estrutura do repositório
 
-```text
+```
 ├── README.md
-├── .gitignore
-├── app.py
+├── app.py                     ← aplicação executável
 ├── data/
-│   ├── base_clinica.json
-│   └── leituras_iot.json
-├── docs/
-│   ├── componente-ia.md
-│   ├── dados.md
-│   ├── diagrama-arquitetura.md
-│   ├── integracao.md
-│   └── testes-e-resultados.md
-├── prompts/
-│   ├── sistema_tutor.txt
-│   └── sistema_veterinario.txt
-├── src/
-│   └── ia_clyvovet/
-│       ├── __init__.py
-│       ├── avaliacao.py
-│       ├── cliente_api.py
-│       ├── ia_generativa.py
-│       ├── modelos.py
-│       ├── motor_regras.py
-│       ├── orquestrador.py
-│       ├── recomendador.py
-│       ├── servico_http.py
-│       └── validacao.py
-├── tests/
-│   ├── suporte.py
-│   ├── test_api_dotnet.py
-│   ├── test_http.py
-│   ├── test_jornada.py
-│   └── test_regras.py
-└── web/
-    ├── app.js
-    ├── index.html
-    └── styles.css
+│   ├── base_clinica.json      ← tutores, pets, prontuários, vacinas, medicação
+│   └── leituras_iot.json      ← payload MQTT (temp + RFID)
+├── src/ia_clyvovet/
+│   ├── motor_regras.py
+│   ├── recomendador.py
+│   ├── ia_generativa.py
+│   ├── orquestrador.py
+│   ├── validacao.py
+│   ├── cliente_api.py
+│   ├── avaliacao.py
+│   └── servico_http.py
+├── prompts/                   ← prompts de produção para o LLM
+├── web/                       ← interface do plantão e do tutor
+├── tests/                     ← cenários da jornada, da API e da tela
+└── docs/
 ```
 
 ## Onde está cada parte da entrega
