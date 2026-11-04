@@ -8,6 +8,7 @@ A 3ª sprint definiu o componente de IA. Esta sprint implementa esse componente 
 
 A IA prioriza a internação, recomenda o serviço e redige a mensagem do tutor. A decisão terapêutica permanece com o veterinário responsável.
 
+- Vídeo (YouTube, não listado): https://youtu.be/V-ly5bB0eyw
 - IoT das sprints 1 e 2: [PietroDonella/IoT-Challenge](https://github.com/PietroDonella/IoT-Challenge)
 - API .NET da CLYVO VET: [EnzoVazz/ClyvoVet](https://github.com/EnzoVazz/ClyvoVet)
 
